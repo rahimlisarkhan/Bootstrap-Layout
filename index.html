@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior:smooth;">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="header">
+    <div class="header" id="home">
         <!-- Nav -->
         <nav class="navbar position-fixed fixed-top navbar-expand-lg navbar-light bg-dark ">
             <div class="container ">
@@ -27,26 +27,25 @@
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
                         <li class="nav-item">
-                            <a class="nav-link text-white active " aria-current="page" href="#">Home</a>
+                            <a class="nav-link text-white active " aria-current="page" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">About</a>
+                            <a class="nav-link text-white" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Portfolio</a>
+                            <a class="nav-link text-white" href="#portofilo">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Contact</a>
+                            <a class="nav-link text-white" href="#contact">Contact</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Blog</a>
-                        </li>
+
                         <div class="btn-group ml-5" role="group">
                             <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
                                 data-toggle="dropdown" aria-expanded="false">
                                 Join us
                             </button>
-                            <div class="dropdown-menu" data-toggle="modal" data-target="#staticBackdrop" aria-labelledby="btnGroupDrop1">
+                            <div class="dropdown-menu" data-toggle="modal" data-target="#staticBackdrop"
+                                aria-labelledby="btnGroupDrop1">
                                 <a class="dropdown-item" href="#">Register</a>
                                 <a class="dropdown-item" href="#">Log in</a>
 
@@ -94,7 +93,7 @@
     <main class="container">
 
         <!-- About us -->
-        <section class="row">
+        <section class="row" id="about">
             <div class="col-lg-12 p-0">
 
                 <div class="jumbotron d-flex flex-column align-items-center mb-5 bg-dark text-white rounded-0">
@@ -110,7 +109,8 @@
             </div>
         </section>
 
-        <section class="row  pt-5">
+        <!-- Portofilo -->
+        <section class="row  pt-5" id="portofilo">
             <div class="col-lg-8 p-0">
                 <h1 class="display-5">Portofilo</h1>
 
@@ -296,7 +296,7 @@
             </div>
         </section>
 
-        <section class="row">
+        <section class="row" id="contact">
             <div class="col-lg-12 p-0">
 
                 <div class="jumbotron d-flex flex-column mb-5 bg-dark text-white rounded-0">
@@ -307,7 +307,7 @@
                             <label for="exampleInputEmail1">Full name</label>
                             <input type="email" class="form-control" id="exampleInputEmail1"
                                 aria-describedby="emailHelp">
-             
+
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
@@ -316,7 +316,7 @@
                             <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                                 else.</small> -->
                         </div>
-                  
+
                         <div class="form-group form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Check me out</label>
@@ -342,41 +342,44 @@
 
 
 
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Register</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark">Understood</button>
+                </div>
             </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-dark">Submit</button>
-          </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-dark">Understood</button>
-        </div>
-      </div>
     </div>
-  </div>
 
     <!-- Bootsrap script -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
